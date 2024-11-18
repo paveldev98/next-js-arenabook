@@ -58,3 +58,19 @@ export const getBookings = cache(async (sessionToken: string) => {
   `;
   return bookingsWithCourts;
 });
+
+export const deleteBooking = cache(
+  async (sessionToken: Session['token'], bookingId: number) => {
+    const [deletedBooking] = await sql<Booking[]>`
+      DELETE FROM bookings USING sessions
+      WHERE
+        sessions.token = ${sessionToken}
+        AND sessions.expiry_timestamp > now()
+        AND bookings.booking_id = ${bookingId}
+      RETURNING
+        bookings.*
+    `;
+
+    return deletedBooking;
+  },
+);

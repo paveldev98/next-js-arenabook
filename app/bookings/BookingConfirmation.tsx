@@ -2,6 +2,7 @@
 
 import type { User } from 'migrations/00000-createTableUsers';
 import Link from 'next/link';
+import { useState } from 'react';
 import type { BookingWithCourt } from '../database/bookings';
 
 type Props = {
@@ -10,6 +11,30 @@ type Props = {
 };
 
 export default function BookingConfirmation(props: Props) {
+  const [bookings, setBookings] = useState(props.bookingsForUser);
+
+  const handleRemoveBooking = async (bookingId: number) => {
+    try {
+      const response = await fetch('/api/deleteBooking', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ bookingId }),
+      });
+
+      if (response.ok) {
+        setBookings(
+          bookings.filter((booking) => booking.bookingId !== bookingId),
+        );
+      } else {
+        console.error('Failed to delete booking');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  };
+
   return (
     <>
       {props.bookingsForUser.map((bookingForUser) => {
@@ -108,9 +133,12 @@ export default function BookingConfirmation(props: Props) {
               <p style={{ marginLeft: '35px', marginTop: '0px' }}>
                 {bookingForUser.courtDescription}
               </p>
-
-              <button className="confirm-booking-btn">Confirm Booking</button>
-              <button className="remove-booking-btn">Remove Booking</button>
+              <button
+                className="remove-booking-btn"
+                onClick={() => handleRemoveBooking(bookingForUser.bookingId)}
+              >
+                Remove Booking
+              </button>
             </form>
           </div>
         );

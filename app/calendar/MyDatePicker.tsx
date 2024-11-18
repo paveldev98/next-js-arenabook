@@ -19,6 +19,7 @@ export default function MyDatePicker(props: Props) {
   const [selected, setSelected] = useState<Date | undefined>(undefined);
   const [selectedSlot, setSelectedSlot] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const router = useRouter();
 
@@ -42,6 +43,8 @@ export default function MyDatePicker(props: Props) {
               selectedSlot,
             }),
           });
+
+          setSuccessMessage('Booking Successful!');
 
           setErrorMessage('');
 
@@ -102,6 +105,7 @@ export default function MyDatePicker(props: Props) {
           Book slot
         </button>
       </form>
+      <p>{successMessage}</p>
       <ErrorMessage>{errorMessage}</ErrorMessage>
     </>
   );

@@ -1,9 +1,10 @@
-import { createBooking } from '@/app/database/bookings';
+import { createBooking, deleteBooking } from '@/app/database/bookings';
 import {
   type Booking,
   bookingSchema,
 } from 'migrations/00004-createTableBookings';
-import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
 import { getCookie } from 'util/cookies';
 
 export type CreateBookingResponseBodyPost =
