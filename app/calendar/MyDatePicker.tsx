@@ -61,6 +61,7 @@ export default function MyDatePicker(props: Props) {
           setSelected(undefined);
           setSelectedSlot('');
 
+          router.push('/bookings');
           router.refresh();
         }}
       >
