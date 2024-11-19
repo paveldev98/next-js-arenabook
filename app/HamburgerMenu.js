@@ -30,7 +30,7 @@ export default function HamburgerMenu({ user }) {
           onClick={handleToggleSidebar}
         >
           <Image
-            src="hamburger-menu.svg"
+            src="/hamburger-menu.svg"
             alt="hamburger menu"
             width={42}
             height={42}
@@ -55,6 +55,9 @@ export default function HamburgerMenu({ user }) {
             </Link>
             <Link href="/bookings" className="link">
               My Bookings
+            </Link>
+            <Link href={`/profile/${user.username}`} className="link">
+              Profile
             </Link>
           </>
         ) : (

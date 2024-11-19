@@ -45,7 +45,7 @@ export default async function RootLayout({ children }) {
             }}
           >
             <Image
-              src="f7_sportscourt-fill.svg"
+              src="/f7_sportscourt-fill.svg"
               alt="arena-book-logo"
               width={42}
               height={42}

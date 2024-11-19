@@ -1,4 +1,7 @@
+import Image from 'next/image';
+import ImageDisplay from './ImageDisplay';
 import SportsSelection from './SportsSelection';
+import UploadImage from './UploadImage';
 
 type Props = {
   params: Promise<{
@@ -18,9 +21,17 @@ export default async function UserProfilePage(props: Props) {
         alignItems: 'center',
       }}
     >
+      {' '}
+      <Image
+        style={{ marginTop: '100px' }}
+        src="/user.svg"
+        alt="user profile"
+        width={62}
+        height={62}
+      />
       <div
         style={{
-          marginTop: '100px',
+          marginTop: '40px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -28,12 +39,15 @@ export default async function UserProfilePage(props: Props) {
           border: '2px solid #468f73',
           width: '400px',
           marginBottom: '60px',
+          paddingTop: '20px',
         }}
       >
         {' '}
+        <ImageDisplay />
         <h1>
-          <span style={{ color: '#78ccac' }}>{username}'s profile</span>
+          <span>{username}</span>
         </h1>
+        <UploadImage />
         <h2>Add info</h2>
         <SportsSelection />
       </div>
