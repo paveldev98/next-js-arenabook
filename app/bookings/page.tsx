@@ -5,7 +5,6 @@ import { getUser } from '../database/users';
 import BookingConfirmation from './BookingConfirmation';
 
 export default async function MyPlays() {
-  // Task: Restrict access to the bookings page and only display bookings belonging to the current logged in user.
   // 1. Check if the sessionToken cookie exists.
   const sessionTokenCookie = await getCookie('sessionToken');
   // 2. Query user with the sessionToken.

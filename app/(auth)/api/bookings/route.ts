@@ -3,7 +3,6 @@ import {
   type Booking,
   bookingSchema,
 } from 'migrations/00004-createTableBookings';
-import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import { getCookie } from 'util/cookies';
 
@@ -18,7 +17,6 @@ export type CreateBookingResponseBodyPost =
 export async function POST(
   request: Request,
 ): Promise<NextResponse<CreateBookingResponseBodyPost>> {
-  // Task: Create a booking for the current logged in user
   // 1. Get the booking data from the request.
   const body = await request.json();
   // 2. Validate bookings data with zod.

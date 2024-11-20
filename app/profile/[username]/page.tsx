@@ -1,4 +1,7 @@
+import { getUser } from '@/app/database/users';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
+import { getCookie } from 'util/cookies';
 import ImageDisplay from './ImageDisplay';
 import SportsSelection from './SportsSelection';
 import UploadImage from './UploadImage';
