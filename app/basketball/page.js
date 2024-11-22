@@ -51,12 +51,13 @@ export default async function Courts() {
                 />
               </div>
               <p className="court-name">{basketballCourt.courtName}</p>
-              <p className="court-description" style={{ textAlign: 'center' }}>
+              <p className="court-description">
                 {basketballCourt.courtDescription}
               </p>
               <Link
                 href={`/${basketballCourt.courtId}`}
                 className="link-court-details"
+                style={{ marginTop: '10px' }}
               >
                 See details
               </Link>
