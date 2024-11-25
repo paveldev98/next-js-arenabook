@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { getCookie } from 'util/cookies';
 import ImageDisplay from './ImageDisplay';
-import SportsSelection from './SportsSelection';
 import UploadImage from './UploadImage';
+import UserProfile from './UserProfile';
 
 type Props = {
   params: Promise<{
@@ -52,7 +52,7 @@ export default async function UserProfilePage(props: Props) {
         </h1>
         <UploadImage />
         <h2>Add info</h2>
-        <SportsSelection />
+        <UserProfile />
       </div>
     </div>
   );
