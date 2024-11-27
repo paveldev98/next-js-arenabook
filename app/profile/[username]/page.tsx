@@ -20,6 +20,15 @@ type Props = {
 export default async function UserProfilePage(props: Props) {
   const { username } = await props.params;
 
+  // 1. Check if the sessionToken cookie exists.
+  const sessionTokenCookie = await getCookie('sessionToken');
+  // 2. Query user with the sessionToken.
+  const user = sessionTokenCookie && (await getUser(sessionTokenCookie));
+  // 3. If the user does not exist, redirect to the login with the returnTo query parameter.
+  if (!user) {
+    redirect(`/login?returnTo=/profile/${username}`);
+  }
+
   return (
     <div
       style={{

@@ -4,7 +4,6 @@ import { deleteSession } from '@/app/database/sessions';
 import { cookies } from 'next/headers';
 
 export async function logout() {
-  // Task: Implement the user logout workflow
   // 1. Get the session token from the cookie
   const cookieStore = await cookies();
 
