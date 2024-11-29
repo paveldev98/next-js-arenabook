@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
+import { formatDate } from 'util/date';
 import type { CreateBookingResponseBodyPost } from '../(auth)/api/bookings/route';
 import ErrorMessage from '../ErrorMessage';
 import styles from './MyDatePicker.module.css';
@@ -73,9 +74,7 @@ export default function MyDatePicker(props: Props) {
           selected={selected}
           onSelect={setSelected}
           footer={
-            selected
-              ? `Selected: ${selected.toLocaleDateString()}`
-              : 'Pick a day.'
+            selected ? `Selected: ${formatDate(selected)}` : 'Pick a day.'
           }
           className={styles['rdp-root']}
         />
