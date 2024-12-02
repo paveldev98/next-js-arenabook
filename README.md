@@ -1,39 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Final Project: ArenaBook Web Application
 
-## Getting Started
+Design and develop a court/gym booking web application for people who want to book slots for their recreational sports.
 
-First, run the development server:
+ArenaBook is a web application that allows users to book their favorite sports venues. The idea for this application came from the need of users who want a quick and easy way to book their recreational sports activities. Therefore, my goal was to develop an easy to navigate app with a modern UI. ArenaBook is a web app which allows users to filter courts based on the selected sport and book a court of their choice.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Figma Design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## DrawSQL Design
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## UI Architecture/Layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [x] Landing page
+  - [x] Hero area
+  - [x] Log-in form
+  - [x] Register form
+- [x] Login page
+- [x] Register page
+- [x] Profile page
+  - [x] Update personal information
+  - [x] Change profile picture
+- [x] Sports page
+  - [x] Selection of a specific sport
+  - [x] Selected sport page: Courts/gyms mapped and displayed as cards for a selected sport
+    - [x] Provide basic court information (location, name, owner name, owner info, price)
+    - [x] Book a court
+  - [x] Sub-page: Selected court
+    - [x] Show image galler, calendar for selecting date and time for the activity
+    - [x] Add booking button adds booking to My Bookings page
+- [x] My Bookings page
+  - [x] Review booking feature
+  - [x] Remove booking feature
+- [x] Profile page
+  - [x] Profile picture page upload with Cloudinaty API
+  - [x] Add info: First Name, Last Name, Age, Role to the database
 
-## Learn More
+## Technologies
 
-To learn more about Next.js, take a look at the following resources:
+- [x] Next.js
+- [x] Node.js backend
+- [x] TypeScript
+- [x] PostgreSQL database
+  - [x] REST API for CRUD operations
+  - [x] DrawSQL schema
+  - [x] Zod server-side validation
+- [x] Self written user authentication
+- [x] Self written user authorization
+- [x] Image upload
+  - [x] Cloudinary API
+- [x] State management solution
+  - [x] React useState for local state
+- [x] SEO
+  - [x] Specific metadata for each page
+- [x] Testing
+  - [x] Unit testing using JEST
+  - [x] E2E testing using playwright
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Other requirements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Logo
+- [x] favicon
+- [x] Deployed
 
 ## Deployment
 
