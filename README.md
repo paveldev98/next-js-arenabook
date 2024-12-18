@@ -5,8 +5,10 @@ Design and develop a court/gym booking web application for people who want to bo
 ArenaBook is a web application that allows users to book their favorite sports venues. The idea for this application came from the need of users who want a quick and easy way to book their recreational sports activities. Therefore, my goal was to develop an easy to navigate app with a modern UI. ArenaBook is a web app which allows users to filter courts based on the selected sport and book a court of their choice.
 
 ## Figma Design
+![image](https://github.com/user-attachments/assets/ffe7aef9-c626-40ef-bfe6-862602753f86)
 
 ## DrawSQL Design
+![image](https://github.com/user-attachments/assets/9f0241e5-99d6-498a-9023-e999c5d8b69c)
 
 ## UI Architecture/Layout
 
