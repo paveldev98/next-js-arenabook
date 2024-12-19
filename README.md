@@ -4,10 +4,39 @@ Design and develop a court/gym booking web application for people who want to bo
 
 ArenaBook is a web application that allows users to book their favorite sports venues. The idea for this application came from the need of users who want a quick and easy way to book their recreational sports activities. Therefore, my goal was to develop an easy to navigate app with a modern UI. ArenaBook is a web app which allows users to filter courts based on the selected sport and book a court of their choice.
 
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
 ## Figma Design
+
 ![image](https://github.com/user-attachments/assets/ffe7aef9-c626-40ef-bfe6-862602753f86)
 
 ## DrawSQL Design
+
 ![image](https://github.com/user-attachments/assets/9f0241e5-99d6-498a-9023-e999c5d8b69c)
 
 ## UI Architecture/Layout
